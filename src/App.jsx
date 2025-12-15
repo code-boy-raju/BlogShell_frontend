@@ -43,7 +43,6 @@ return (
 <Route path="auth-success" element={<AuthSuccess/>}/>
 <Route path="/admin-submission" element={<AdminSubmission />} />
 <Route path="/login" element={<Login />} />
-
 <Route path="/forgot-password" element={<ForgotPassword />} />
 <Route path="/reset-password/:token" element={<ResetPassword />} />
 {/* admin routes */}
