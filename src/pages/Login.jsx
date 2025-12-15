@@ -135,7 +135,8 @@ export default function Login() {
         </div>
 
         <button
-          onClick={() => window.location.href = "http://localhost:5000/user/google"}
+          onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/user/google`
+}
           className="w-full flex items-center justify-center gap-3 bg-white border-2 border-gray-200 text-gray-700 py-3 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 shadow-md hover:shadow-lg font-medium"
         >
           <FcGoogle className="text-2xl" />

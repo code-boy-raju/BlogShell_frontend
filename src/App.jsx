@@ -4,13 +4,13 @@ import { useDispatch } from "react-redux";
 import { LOGIN_SUCCESS } from "./redux/actions/authActions";
 import { getUserFromToken } from "./utils/auth";
 
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ProtectedRoute from "./pages/PreotectedRoutes";
 import AuthorSignup from "./pages/AuthorSignup";
 import AdminSignup from "./pages/AdminSignup";
-import AdminSubmission from "./pages/adminSubbmission";
+import AdminSubmission from "./pages/AdminSubbmission";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLayout from "./components/admin/AdminLayout";
 import ManageAuthors from "./pages/admin/ManageAuthors";
