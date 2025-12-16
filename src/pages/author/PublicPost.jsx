@@ -59,7 +59,7 @@ export default function PublishedPosts() {
                       <FaGlobe className="text-green-500" />
                       <span>Public</span>
                     </span>
-                    <span>View full post →</span>
+                 
                   </div>
                 </div>
               </div>
