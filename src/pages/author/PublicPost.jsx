@@ -49,7 +49,7 @@ export default function PublishedPosts() {
                   </span>
                 </div>
 
-                <p className="text-gray-600 text-sm line-clamp-4">
+                <p className="text-gray-600 text-sm ">
                   {post.content}
                 </p>
 
