@@ -31,7 +31,7 @@ export default function AdminSignup() {
     e.preventDefault();
 
     if (!form.file) {
-      toast.error("Please upload a profile image!");
+      toast.error("Please upload a document!");
       return;
     }
 
@@ -42,11 +42,12 @@ export default function AdminSignup() {
     fd.append("file", form.file);
 
     try {
-      await dispatch(adminSignup(fd));
-      toast.success("Signup successful!");
-      navigate("/admin-submission");
+      await dispatch(adminSignup(fd,navigate,(msg)=>{
+            toast.success(msg);
+      }));
+
     } catch (err) {
-      toast.error(error || "Something went wrong");
+      toast.error(err || msg);
     }
   };
 

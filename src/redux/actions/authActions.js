@@ -31,7 +31,7 @@ export const authorSignup = (formData) => async (dispatch) => {
 
 
 // ADMIN SIGNUP (FILE UPLOAD)
-export const adminSignup = (formData) => async (dispatch) => {
+export const adminSignup = (formData,navigate,callback) => async (dispatch) => {
   dispatch({ type: AUTH_START });
 
   try {
@@ -41,11 +41,14 @@ export const adminSignup = (formData) => async (dispatch) => {
       type: AUTH_SUCCESS,
       payload: data,
     });
+    callback(data.message || "Admin signup successful")
+    navigate("/admin-submission")
   } catch (err) {
     dispatch({
       type: AUTH_FAIL,
       payload: err.response?.data?.message || "Admin signup failed",
     });
+    callback( err.response?.data?.message ||  "Admin signup failed")
   }
 };
 ;
